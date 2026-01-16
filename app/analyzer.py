@@ -1,5 +1,3 @@
-
-
 import string
 
 def analyze(user_query: str)-> dict:
