@@ -1,4 +1,4 @@
-# LLM Traffic Controller
+# Adaptive llm inference router
 
 An intelligent request routing system that dynamically selects the most suitable LLM model based on **query complexity, ambiguity, and reasoning depth**.
 
