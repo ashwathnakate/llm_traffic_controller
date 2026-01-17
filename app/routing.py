@@ -31,7 +31,7 @@ class Route(Enum):
     CLARIFICATION_REQUIRED = "clarification_required"
 
 
-# Route execution configuration
+# <------ Route execution configuration ------>
 ROUTE_CONFIG = {
     Route.FAST_PATH: {
         "model_tier": "small",
@@ -60,15 +60,15 @@ def route(analysis: dict) -> Route:
     reasoning = analysis["reasoning"]
     simplicity = analysis["simplicity"]
 
-    # 🚨 Ambiguity blocks execution
+    # <----- Ambiguity blocks execution ------>
     if ambiguity != "low":
         return Route.CLARIFICATION_REQUIRED
 
-    # Explicit reasoning demand
+    # <------ Explicit reasoning demand ------>
     if reasoning == "high":
         return Route.DEEP_REASONING
 
-    # Medium complexity without simplification intent
+    # <------ Medium complexity without simplification intent ------>
     if complexity == "medium" and simplicity != "high":
         return Route.DEEP_REASONING
 

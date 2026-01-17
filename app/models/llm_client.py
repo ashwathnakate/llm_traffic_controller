@@ -68,5 +68,5 @@ def run(route: Route, query: str) -> tuple[bool, str, str]:
 
     except Exception as e:
         # Log error server-side
-        print("GROQ EXECUTION ERROR:", repr(e))
+        print("GROQ EXECUTION ERROR:", repr(e)) # function to obtain a string e.g.(ValueError('Invalid input))
         return False, model, ""
