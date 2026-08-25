@@ -200,7 +200,6 @@ This is the kind of system used internally at:
 - Automatic fallback from fast → deep model
 - Cost-aware routing
 - Confidence scoring
-- Multi-provider support (OpenAI / NVIDIA NIM)
 - Learning-based router
 
 ---
